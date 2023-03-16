@@ -82,3 +82,20 @@ select {
         scroll-behavior: auto !important;
     }
 }
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+.dashboard {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.dashboard-button {
+    color: var(--clr-dark);
+    background-color: transparent;
+    border: solid 0.1rem var(--clr-dark);
+    padding: 0.1rem 0.2rem;
+}

@@ -1,0 +1,9 @@
+.node-parent {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.node-children {
+    padding-left: 2rem;
+}
