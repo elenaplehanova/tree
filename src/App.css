@@ -1,1 +1,10 @@
- 
+.app {
+    width: 30rem;
+    border: solid 0.1rem var(--clr-dark);
+}
+
+.app-header {
+    text-align: center;
+    border-bottom: solid 0.1rem var(--clr-dark);
+    padding: 0.5rem;
+}
