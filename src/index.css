@@ -98,4 +98,5 @@ select {
     background-color: transparent;
     border: solid 0.1rem var(--clr-dark);
     padding: 0.1rem 0.2rem;
+    cursor: pointer;
 }
