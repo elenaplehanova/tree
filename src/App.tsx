@@ -1,7 +1,7 @@
 import "./App.css";
 import Node from "./components/Node/Node";
 import { useAppDispatch, useAppSelector } from "./hooks/redux";
-import { addNewNode } from "./store/reducers/TreeSlice";
+import { addRootNode, resetRootNode } from "./store/reducers/TreeSlice";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -15,10 +15,12 @@ function App() {
             ))}
 
             <div className="dashboard">
-                <button className="dashboard-button" onClick={() => dispatch(addNewNode())}>
+                <button className="dashboard-button" onClick={() => dispatch(addRootNode())}>
                     Add
                 </button>
-                <button className="dashboard-button">Reset</button>
+                <button className="dashboard-button" onClick={() => dispatch(resetRootNode())}>
+                    Reset
+                </button>
             </div>
         </div>
     );
