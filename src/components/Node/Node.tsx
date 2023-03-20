@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import "./Node.css";
 import { useAppDispatch } from "../../hooks/redux";
 import {
@@ -19,6 +19,8 @@ const Node: FC<{ node: INode }> = ({ node }) => {
 
     const [name, setName] = useState(node.name);
     const [isEdit, setIsEdit] = useState(false);
+
+    useEffect(() => setName(node.name), [node]);
 
     function handleKeyDown(e: any) {
         if (e.key === "Enter") {

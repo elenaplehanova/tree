@@ -84,7 +84,7 @@ const treeSlice = createSlice({
             const edit = (tree: any) =>
                 tree.map((node: INode) => {
                     if (node.id === id) {
-                        return { id: node.id, name: name };
+                        return { id: node.id, name: name, children: node.children };
                     } else {
                         if (node.children) {
                             node.children = edit(node.children);
