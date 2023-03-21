@@ -22,7 +22,7 @@ const Node: FC<{ node: INode }> = ({ node }) => {
 
     useEffect(() => setName(node.name), [node]);
 
-    function handleKeyDown(e: any) {
+    function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
         if (e.key === "Enter") {
             dispatch(editNodeName({ ...node, name: name }));
             setIsEdit(false);
