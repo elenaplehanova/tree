@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import treeReducer from "./reducers/TreeSlice";
 
 const rootReducer = combineReducers({
-    userReducer: treeReducer,
+    treeReducer,
 });
 
 export const setupStore = () => {
