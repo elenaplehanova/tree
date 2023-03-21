@@ -24,7 +24,7 @@ const treeSlice = createSlice({
         },
         addChildNode(state, action: PayloadAction<INode>) {
             let id = action.payload.id;
-            const addChildren = (tree: any) =>
+            const addChildren = (tree: INode[]) =>
                 tree.map((node: INode) => {
                     if (node.id === id) {
                         let newNode = { id: uuid(), name: initialNodeName };
@@ -44,7 +44,7 @@ const treeSlice = createSlice({
         },
         resetChildNode(state, action: PayloadAction<INode>) {
             let id = action.payload.id;
-            const reset = (tree: any) =>
+            const reset = (tree: INode[]) =>
                 tree.map((node: INode) => {
                     if (node.id === id) {
                         return { id: node.id, name: initialNodeName };
@@ -81,7 +81,7 @@ const treeSlice = createSlice({
             let id = action.payload.id;
             let name = action.payload.name;
 
-            const edit = (tree: any) =>
+            const edit = (tree: INode[]) =>
                 tree.map((node: INode) => {
                     if (node.id === id) {
                         return { id: node.id, name: name, children: node.children };
