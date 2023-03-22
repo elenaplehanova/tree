@@ -5,7 +5,7 @@ import { addRootNode, resetRootNode } from "./store/reducers/TreeSlice";
 
 function App() {
     const dispatch = useAppDispatch();
-    const { tree } = useAppSelector((state) => state.userReducer);
+    const { tree } = useAppSelector((state) => state.treeReducer);
 
     return (
         <div className="app">
